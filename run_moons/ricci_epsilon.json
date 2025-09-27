@@ -1,0 +1,54 @@
+{
+  "method": "epsilon",
+  "npz": "run_moons/layer_outputs_test.npz",
+  "layers": [
+    "hidden_1",
+    "hidden_2",
+    "hidden_3",
+    "hidden_4",
+    "hidden_5"
+  ],
+  "k_list": [
+    1,
+    2,
+    3,
+    6,
+    10,
+    13,
+    15,
+    20,
+    30
+  ],
+  "epsilon": 0.9,
+  "best_k": null,
+  "best_rho": null,
+  "results": {
+    "1": {
+      "error": "No path between 996 and 663."
+    },
+    "2": {
+      "error": "No path between 996 and 663."
+    },
+    "3": {
+      "error": "No path between 996 and 663."
+    },
+    "6": {
+      "error": "No path between 996 and 663."
+    },
+    "10": {
+      "error": "No path between 996 and 663."
+    },
+    "13": {
+      "error": "No path between 996 and 663."
+    },
+    "15": {
+      "error": "No path between 996 and 663."
+    },
+    "20": {
+      "error": "No path between 996 and 663."
+    },
+    "30": {
+      "error": "No path between 996 and 663."
+    }
+  }
+}
