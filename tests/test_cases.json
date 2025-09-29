@@ -1,0 +1,62 @@
+{
+  "suites": [
+    {
+      "name": "quick_smoke_mnist",
+      "datasets": ["mnist_0_vs_8"],
+      "epochs": 10,
+      "depth": 5,
+      "width": 50,
+      "dropout": 0.0,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "patience": 4,
+      "knn_k": [5, 7, 9],
+      "ricci_k": [10, 20],
+      "ricci_sample_size": 500,
+      "ricci_sample_pairs": 5000,
+      "ricci_allow_disconnected": false,
+      "ricci_disconnected_penalty": 1000000.0,
+      "ricci_prefer_exact": false
+    },
+    {
+      "name": "full_mnist",
+      "datasets": ["mnist_0_vs_8"],
+      "epochs": 40,
+      "depth": 5,
+      "width": 50,
+      "dropout": 0.0,
+      "batch_size": 256,
+      "lr": 0.001,
+      "weight_decay": 0.00001,
+      "patience": 8,
+      "knn_k": [3, 5, 7, 9, 11, 13, 15, 17, 19, 21],
+      "ricci_k": [10, 15, 20, 30, 40, 50],
+      "ricci_sample_size": 1500,
+      "ricci_sample_pairs": 20000,
+      "ricci_allow_disconnected": false,
+      "ricci_disconnected_penalty": 1000000.0,
+      "ricci_prefer_exact": false
+    },
+    {
+      "name": "no_network_offline",
+      "datasets": ["breast_cancer", "annulus_vs_disk", "torus_vs_sphere"],
+      "epochs": 15,
+      "depth": 5,
+      "width": 50,
+      "dropout": 0.0,
+      "batch_size": 128,
+      "lr": 0.001,
+      "weight_decay": 0.0,
+      "patience": 6,
+      "knn_k": [5, 7, 9],
+      "ricci_k": [10, 20, 30],
+      "ricci_sample_size": 1000,
+      "ricci_sample_pairs": 10000,
+      "ricci_allow_disconnected": true,
+      "ricci_disconnected_penalty": 1000000.0,
+      "ricci_prefer_exact": true
+    }
+  ]
+}
+

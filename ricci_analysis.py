@@ -45,6 +45,7 @@ from scipy.sparse.csgraph import shortest_path as cs_shortest_path
 # Graph + metrics
 # ------------------------
 
+
 def build_knn_graph(X: np.ndarray, k: int) -> nx.Graph:
     nbrs = NearestNeighbors(n_neighbors=k+1, algorithm='auto').fit(X)
     distances, indices = nbrs.kneighbors(X)
@@ -100,11 +101,13 @@ def total_geodesic_sum(
         for src, lengths in nx.all_pairs_shortest_path_length(G):
             # lengths is dict {node: dist}
             if len(lengths) < n and not allow_disconnected:
-                raise nx.NetworkXNoPath("Graph disconnected; use --allow-disconnected or increase k")
+                raise nx.NetworkXNoPath(
+                    "Graph disconnected; use --allow-disconnected or increase k")
             if allow_disconnected:
                 # fill missing with penalty
                 miss = n - len(lengths)
-                total += sum(float(d) for d in lengths.values()) + miss * disconnected_penalty
+                total += sum(float(d) for d in lengths.values()) + \
+                    miss * disconnected_penalty
             else:
                 total += sum(float(d) for d in lengths.values())
         # each pair counted twice in all_pairs; divide by 2
@@ -124,8 +127,10 @@ def total_geodesic_sum_fast(G: nx.Graph,
     rows = []
     cols = []
     for u, v in G.edges():
-        rows.append(u); cols.append(v)
-        rows.append(v); cols.append(u)
+        rows.append(u)
+        cols.append(v)
+        rows.append(v)
+        cols.append(u)
     data = np.ones(len(rows), dtype=np.float32)
     A = csr_matrix((data, (rows, cols)), shape=(n, n))
 
@@ -133,7 +138,8 @@ def total_geodesic_sum_fast(G: nx.Graph,
     D = cs_shortest_path(A, directed=False, unweighted=True)
 
     if not allow_disconnected and np.isinf(D).any():
-        raise nx.NetworkXNoPath("Graph disconnected; use --allow-disconnected or increase k")
+        raise nx.NetworkXNoPath(
+            "Graph disconnected; use --allow-disconnected or increase k")
 
     if allow_disconnected:
         D = np.where(np.isinf(D), disconnected_penalty, D)
@@ -146,30 +152,43 @@ def total_geodesic_sum_fast(G: nx.Graph,
 # Ricci computation per k
 # ------------------------
 
+
 def ricci_for_k(
     layers: List[np.ndarray],
     k: int,
     sample_pairs: int,
     allow_disconnected: bool,
     disconnected_penalty: float,
+    prefer_exact: bool = True,
+    progress: bool = False,
 ) -> Dict[str, float]:
     Ric_list: List[float] = []
     g_list: List[float] = []
 
     # Build graphs & compute metrics per layer
-    for X in layers:
+    layer_iter = enumerate(layers)
+    if progress:
+        layer_iter = enumerate(tqdm(layers, desc=f"layers | k={k}", leave=False))
+    for _, X in layer_iter:
         G = build_knn_graph(X, k)
         Ric = forman_ricci_total(G)
-        # Fast exact APSP first; if it fails (e.g., SciPy not present), fallback to sampling
-        try:
-            g = total_geodesic_sum_fast(G,
-                                        allow_disconnected=allow_disconnected,
-                                        disconnected_penalty=disconnected_penalty)
-        except Exception:
-            g = total_geodesic_sum(G,
-                                   sample_pairs=sample_pairs,
-                                   allow_disconnected=allow_disconnected,
-                                   disconnected_penalty=disconnected_penalty)
+        g = None
+        if prefer_exact:
+            try:
+                g = total_geodesic_sum_fast(
+                    G,
+                    allow_disconnected=allow_disconnected,
+                    disconnected_penalty=disconnected_penalty,
+                )
+            except Exception:
+                g = None
+        if g is None:
+            g = total_geodesic_sum(
+                G,
+                sample_pairs=sample_pairs,
+                allow_disconnected=allow_disconnected,
+                disconnected_penalty=disconnected_penalty,
+            )
         Ric_list.append(Ric)
         g_list.append(g)
 
@@ -201,20 +220,28 @@ def ricci_for_k(
 # ------------------------
 
 def main():
-    ap = argparse.ArgumentParser(description="Compute Ricci-like metrics from layer activations")
-    ap.add_argument("--npz", required=True, help="Path to layer_outputs_test.npz")
-    ap.add_argument("--k-list", nargs="+", type=int, default=[6,7,9,10,15,18,20,30,50,90,100,120,150])
-    ap.add_argument("--sample-pairs", type=int, default=200000, help="0 means full all-pairs (slow)")
+    ap = argparse.ArgumentParser(
+        description="Compute Ricci-like metrics from layer activations")
+    ap.add_argument("--npz", required=True,
+                    help="Path to layer_outputs_test.npz")
+    ap.add_argument("--k-list", nargs="+", type=int,
+                    default=[6, 7, 9, 10, 15, 18, 20, 30, 50, 90, 100, 120, 150])
+    ap.add_argument("--sample-pairs", type=int, default=200000,
+                    help="0 means full all-pairs (slow)")
     ap.add_argument("--allow-disconnected", action="store_true")
     ap.add_argument("--disconnected-penalty", type=float, default=1e6)
+    ap.add_argument("--skip-exact", action="store_true",
+                    help="Skip exact shortest paths and rely on sampling-based estimates")
     ap.add_argument("--out", type=str, default=None)
     args = ap.parse_args()
 
     data = np.load(args.npz)
     # Collect hidden layers in order
-    layer_keys = sorted([k for k in data.keys() if k.startswith("hidden_")], key=lambda s: int(s.split("_")[1]))
+    layer_keys = sorted([k for k in data.keys() if k.startswith(
+        "hidden_")], key=lambda s: int(s.split("_")[1]))
     layers = [data[k].astype(np.float32) for k in layer_keys]
-    print(f"[ricci] layers={len(layers)} | n_test={layers[0].shape[0]} | dims={[x.shape[1] for x in layers]}")
+    print(
+        f"[ricci] layers={len(layers)} | n_test={layers[0].shape[0]} | dims={[x.shape[1] for x in layers]}")
 
     results: Dict[int, Dict[str, float]] = {}
     best_k = None
@@ -222,7 +249,14 @@ def main():
 
     for k in tqdm(args.k_list, desc=f"k sweep | {args.npz}"):
         try:
-            res = ricci_for_k(layers, k, args.sample_pairs, args.allow_disconnected, args.disconnected_penalty)
+            res = ricci_for_k(
+                layers,
+                k,
+                args.sample_pairs,
+                args.allow_disconnected,
+                args.disconnected_penalty,
+                prefer_exact=not args.skip_exact,
+            )
         except Exception as e:
             res = {"error": str(e)}
         results[k] = res
@@ -235,6 +269,7 @@ def main():
         "npz": args.npz,
         "layers": layer_keys,
         "k_list": args.k_list,
+        "skip_exact": bool(args.skip_exact),
         "best_k": best_k,
         "best_rho": float(best_rho) if best_k is not None else None,
         "results": results,
