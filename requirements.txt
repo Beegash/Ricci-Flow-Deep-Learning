@@ -7,3 +7,5 @@ matplotlib
 networkx
 pandas
 tqdm
+tensorflow
+tensorflow-datasets
