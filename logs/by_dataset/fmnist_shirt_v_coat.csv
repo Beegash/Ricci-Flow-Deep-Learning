@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+fmnist_shirt_v_coat,real,narrow,5,0.8945000171661377,200,-0.6783206410347709,-0.8259968420992446,4,True,22.1,fmnist_shirt_v_coat__w25__d5__s0,,20251007_220339
+fmnist_shirt_v_coat,real,narrow,11,0.9049999713897705,250,-0.27911405839187364,-0.11705336734486683,10,True,41.9,fmnist_shirt_v_coat__w25__d11__s0,,20251007_220339
+fmnist_shirt_v_coat,real,wide,5,0.9054999947547913,50,-0.9976624476796071,-3.375314317422186,4,True,23.0,fmnist_shirt_v_coat__w50__d5__s0,,20251007_220339
+fmnist_shirt_v_coat,real,wide,11,0.9070000052452087,200,-0.1965744399278819,-0.08130950232055811,10,True,43.1,fmnist_shirt_v_coat__w50__d11__s0,,20251007_220339
+fmnist_shirt_v_coat,real,bottleneck,5,0.9035000205039978,150,-0.9459267537511729,-1.7915770415829244,4,True,23.0,fmnist_shirt_v_coat__bottleneck__d5__s0,,20251007_220339
+fmnist_shirt_v_coat,real,bottleneck,11,0.8924999833106995,200,-0.19821753773045578,-0.0820074916493518,10,True,43.7,fmnist_shirt_v_coat__bottleneck__d11__s0,,20251007_220339
+fmnist_shirt_v_coat,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.8920000195503235,250,-0.08830961188433872,-0.08854025547992246,True,28.2,fmnist_shirt_v_coat__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.8955000042915344,30,0.9074679759364929,1.5129885919114816,True,29.1,fmnist_shirt_v_coat__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9024999737739563,120,0.8920926155957802,1.4320826960853899,True,28.7,fmnist_shirt_v_coat__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9004999995231628,50,0.6987810190639563,0.8649143567885604,True,29.7,fmnist_shirt_v_coat__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9125000238418579,350,0.6473128360350663,0.7706596060719249,True,28.6,fmnist_shirt_v_coat__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.8999999761581421,30,0.869476652893992,1.3309308450642885,True,29.9,fmnist_shirt_v_coat__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.8999999761581421,250,-0.2324363927075752,-0.2367634721279321,True,30.4,fmnist_shirt_v_coat__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_shirt_v_coat,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.906499981880188,250,0.8569541624167047,1.2817638779680225,True,31.3,fmnist_shirt_v_coat__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

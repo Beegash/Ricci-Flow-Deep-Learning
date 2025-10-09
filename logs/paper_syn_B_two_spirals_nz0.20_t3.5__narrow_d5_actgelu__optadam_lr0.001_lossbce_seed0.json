@@ -1,0 +1,30 @@
+{
+  "dataset": "paper_syn_B_two_spirals_nz0.20_t3.5",
+  "mode": "synthetic",
+  "width": "narrow",
+  "depth": 5,
+  "activation": "gelu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.625,
+  "best_k": 90,
+  "rho": -0.9977838401013714,
+  "z": -3.402008921257786,
+  "connected_all_layers": true,
+  "elapsed_s": 36.2,
+  "run_id": "paper_syn_B_two_spirals_nz0.20_t3.5__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_25_gelu",
+    "block2_25_gelu",
+    "block3_25_gelu",
+    "block4_25_gelu",
+    "block5_25_gelu"
+  ],
+  "npz": "data\\paper_syn_B_two_spirals_nz0.20_t3.5.npz"
+}

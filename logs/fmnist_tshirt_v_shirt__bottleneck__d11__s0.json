@@ -1,0 +1,27 @@
+{
+  "dataset": "data/fmnist_tshirt_v_shirt.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 11,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.8460000157356262,
+  "layer_names": [
+    "dense_976",
+    "dense_977",
+    "dense_978",
+    "dense_979",
+    "dense_980",
+    "dense_981",
+    "dense_982",
+    "dense_983",
+    "dense_984",
+    "dense_985",
+    "dense_986"
+  ]
+}

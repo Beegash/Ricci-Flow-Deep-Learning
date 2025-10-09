@@ -1,0 +1,17 @@
+{
+  "dataset": "data\\cifar10_car_v_truck.npz",
+  "width": 50,
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.7465000152587891,
+  "layer_names": [
+    "dense_2392",
+    "dense_2393",
+    "dense_2394",
+    "dense_2395",
+    "dense_2396"
+  ]
+}

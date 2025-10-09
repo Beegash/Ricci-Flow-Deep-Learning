@@ -1,0 +1,23 @@
+{
+  "dataset": "data\\paper_syn_A_sin_bands_1k_each.npz",
+  "width": 50,
+  "depth": 11,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9994999766349792,
+  "layer_names": [
+    "dense_2020",
+    "dense_2021",
+    "dense_2022",
+    "dense_2023",
+    "dense_2024",
+    "dense_2025",
+    "dense_2026",
+    "dense_2027",
+    "dense_2028",
+    "dense_2029",
+    "dense_2030"
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "generated_at": "Wed Oct  8 00:19:05 2025",
+  "n_rows": 114,
+  "datasets": [
+    "cifar10_car_v_truck",
+    "cifar10_cat_v_dog",
+    "fmnist_sandal_v_boot",
+    "fmnist_shirt_v_coat",
+    "fmnist_tshirt_v_shirt",
+    "mnist_0v8",
+    "mnist_1v7",
+    "mnist_2v7",
+    "mnist_3v5",
+    "mnist_4v9",
+    "mnist_6v8",
+    "paper_syn_A_sin_bands_1k_each",
+    "paper_syn_B_two_spirals_1k_each",
+    "paper_syn_C_sine_surface_vs_plane_1k_each",
+    "svhn_1v7",
+    "svhn_3v8",
+    "synthetic_A_moons_1k_each",
+    "synthetic_B_circles_1k_each",
+    "synthetic_C_blobs_1k_each"
+  ],
+  "synthetic_datasets": [
+    "paper_syn_A_sin_bands_1k_each",
+    "paper_syn_B_two_spirals_1k_each",
+    "paper_syn_C_sine_surface_vs_plane_1k_each",
+    "synthetic_A_moons_1k_each",
+    "synthetic_B_circles_1k_each",
+    "synthetic_C_blobs_1k_each"
+  ],
+  "real_datasets": [
+    "cifar10_car_v_truck",
+    "cifar10_cat_v_dog",
+    "fmnist_sandal_v_boot",
+    "fmnist_shirt_v_coat",
+    "fmnist_tshirt_v_shirt",
+    "mnist_0v8",
+    "mnist_1v7",
+    "mnist_2v7",
+    "mnist_3v5",
+    "mnist_4v9",
+    "mnist_6v8",
+    "svhn_1v7",
+    "svhn_3v8"
+  ],
+  "acc_vs_rho_corr_all": -0.12380270303878091,
+  "acc_vs_rho_corr_valid": -0.12380270303878091
+}

@@ -1,0 +1,30 @@
+{
+  "dataset": "mnist_3v5",
+  "mode": "real",
+  "width": "narrow",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.988959014415741,
+  "best_k": 200,
+  "rho": -0.33687753543287885,
+  "z": -0.3505661452361868,
+  "connected_all_layers": true,
+  "elapsed_s": 27.4,
+  "run_id": "mnist_3v5__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_25_relu",
+    "block2_25_relu",
+    "block3_25_relu",
+    "block4_25_relu",
+    "block5_25_relu"
+  ],
+  "npz": "data\\mnist_3v5.npz"
+}

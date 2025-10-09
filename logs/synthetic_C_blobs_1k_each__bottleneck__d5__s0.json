@@ -1,0 +1,21 @@
+{
+  "dataset": "data\\synthetic_C_blobs_1k_each.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.8270000219345093,
+  "layer_names": [
+    "dense_2302",
+    "dense_2303",
+    "dense_2304",
+    "dense_2305",
+    "dense_2306"
+  ]
+}

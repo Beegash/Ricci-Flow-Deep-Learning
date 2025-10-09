@@ -1,0 +1,15 @@
+{
+  "dataset": "data\\paper_syn_B_two_spirals_1k_each.npz",
+  "width": 25,
+  "depth": 3,
+  "seed": 0,
+  "epochs": 20,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.6485000252723694,
+  "layer_names": [
+    "dense_38",
+    "dense_39",
+    "dense_40"
+  ]
+}

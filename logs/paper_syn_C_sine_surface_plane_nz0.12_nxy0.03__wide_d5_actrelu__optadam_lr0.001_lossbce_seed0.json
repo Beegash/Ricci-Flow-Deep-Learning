@@ -1,0 +1,30 @@
+{
+  "dataset": "paper_syn_C_sine_surface_plane_nz0.12_nxy0.03",
+  "mode": "synthetic",
+  "width": "wide",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9225000143051147,
+  "best_k": 12,
+  "rho": -0.9993992471508664,
+  "z": -4.055086849872257,
+  "connected_all_layers": true,
+  "elapsed_s": 39.6,
+  "run_id": "paper_syn_C_sine_surface_plane_nz0.12_nxy0.03__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_relu",
+    "block2_50_relu",
+    "block3_50_relu",
+    "block4_50_relu",
+    "block5_50_relu"
+  ],
+  "npz": "data\\paper_syn_C_sine_surface_plane_nz0.12_nxy0.03.npz"
+}

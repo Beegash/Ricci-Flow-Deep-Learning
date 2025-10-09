@@ -1,0 +1,30 @@
+{
+  "dataset": "paper_syn_B_two_spirals_1k_each",
+  "mode": "synthetic",
+  "width": "wide",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.6399999856948853,
+  "best_k": 20,
+  "rho": -0.9678554497922289,
+  "z": -2.057228349856592,
+  "connected_all_layers": true,
+  "elapsed_s": 37.8,
+  "run_id": "paper_syn_B_two_spirals_1k_each__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_relu",
+    "block2_50_relu",
+    "block3_50_relu",
+    "block4_50_relu",
+    "block5_50_relu"
+  ],
+  "npz": "data\\paper_syn_B_two_spirals_1k_each.npz"
+}

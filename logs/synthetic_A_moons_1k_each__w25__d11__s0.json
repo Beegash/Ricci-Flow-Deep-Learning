@@ -1,0 +1,23 @@
+{
+  "dataset": "data\\synthetic_A_moons_1k_each.npz",
+  "width": 25,
+  "depth": 11,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9129999876022339,
+  "layer_names": [
+    "dense_2164",
+    "dense_2165",
+    "dense_2166",
+    "dense_2167",
+    "dense_2168",
+    "dense_2169",
+    "dense_2170",
+    "dense_2171",
+    "dense_2172",
+    "dense_2173",
+    "dense_2174"
+  ]
+}

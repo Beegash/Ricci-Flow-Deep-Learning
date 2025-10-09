@@ -1,0 +1,30 @@
+{
+  "dataset": "mnist_1v5",
+  "mode": "real",
+  "width": "narrow",
+  "depth": 5,
+  "activation": "gelu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9980266690254211,
+  "best_k": 350,
+  "rho": -0.9964221658229448,
+  "z": -3.1621771507837146,
+  "connected_all_layers": true,
+  "elapsed_s": 28.2,
+  "run_id": "mnist_1v5__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_25_gelu",
+    "block2_25_gelu",
+    "block3_25_gelu",
+    "block4_25_gelu",
+    "block5_25_gelu"
+  ],
+  "npz": "data\\mnist_1v5.npz"
+}

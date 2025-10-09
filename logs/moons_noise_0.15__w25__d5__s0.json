@@ -1,0 +1,17 @@
+{
+  "dataset": "data\\moons_noise_0.15.npz",
+  "width": 25,
+  "depth": 5,
+  "seed": 0,
+  "epochs": 40,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.9610000252723694,
+  "layer_names": [
+    "dense_1540",
+    "dense_1541",
+    "dense_1542",
+    "dense_1543",
+    "dense_1544"
+  ]
+}

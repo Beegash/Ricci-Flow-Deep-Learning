@@ -1,0 +1,30 @@
+{
+  "dataset": "mnist_4v9",
+  "mode": "real",
+  "width": "wide",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9894525408744812,
+  "best_k": 250,
+  "rho": -0.22516683428863338,
+  "z": -0.2290922844160465,
+  "connected_all_layers": true,
+  "elapsed_s": 28.7,
+  "run_id": "mnist_4v9__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_relu",
+    "block2_50_relu",
+    "block3_50_relu",
+    "block4_50_relu",
+    "block5_50_relu"
+  ],
+  "npz": "data\\mnist_4v9.npz"
+}

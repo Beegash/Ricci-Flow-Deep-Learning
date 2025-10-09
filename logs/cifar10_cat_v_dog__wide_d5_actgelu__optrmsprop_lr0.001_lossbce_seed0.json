@@ -1,0 +1,30 @@
+{
+  "dataset": "cifar10_cat_v_dog",
+  "mode": "real",
+  "width": "wide",
+  "depth": 5,
+  "activation": "gelu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.5005000233650208,
+  "best_k": null,
+  "rho": null,
+  "z": null,
+  "connected_all_layers": false,
+  "elapsed_s": 12.5,
+  "run_id": "cifar10_cat_v_dog__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_gelu",
+    "block2_50_gelu",
+    "block3_50_gelu",
+    "block4_50_gelu",
+    "block5_50_gelu"
+  ],
+  "npz": "data\\cifar10_cat_v_dog.npz"
+}

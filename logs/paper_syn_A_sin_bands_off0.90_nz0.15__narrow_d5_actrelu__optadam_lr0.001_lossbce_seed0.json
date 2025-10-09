@@ -1,0 +1,30 @@
+{
+  "dataset": "paper_syn_A_sin_bands_off0.90_nz0.15",
+  "mode": "synthetic",
+  "width": "narrow",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9984999895095825,
+  "best_k": 4,
+  "rho": -0.8044326292214901,
+  "z": -1.1110482804440982,
+  "connected_all_layers": true,
+  "elapsed_s": 29.2,
+  "run_id": "paper_syn_A_sin_bands_off0.90_nz0.15__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_25_relu",
+    "block2_25_relu",
+    "block3_25_relu",
+    "block4_25_relu",
+    "block5_25_relu"
+  ],
+  "npz": "data\\paper_syn_A_sin_bands_off0.90_nz0.15.npz"
+}

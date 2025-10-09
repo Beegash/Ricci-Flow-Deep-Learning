@@ -1,0 +1,30 @@
+{
+  "dataset": "mnist_1v5",
+  "mode": "real",
+  "width": "narrow",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9990133047103882,
+  "best_k": 350,
+  "rho": -0.9962773362718833,
+  "z": -3.1422999626313204,
+  "connected_all_layers": true,
+  "elapsed_s": 28.2,
+  "run_id": "mnist_1v5__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_25_relu",
+    "block2_25_relu",
+    "block3_25_relu",
+    "block4_25_relu",
+    "block5_25_relu"
+  ],
+  "npz": "data\\mnist_1v5.npz"
+}

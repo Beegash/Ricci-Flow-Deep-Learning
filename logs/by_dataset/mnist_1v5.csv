@@ -1,0 +1,9 @@
+dataset,mode,width,depth,activation,batchnorm,dropout,residual,optimizer,lr,loss,test_acc,best_k,rho,z,connected_all_layers,elapsed_s,run_id,error,session
+mnist_1v5,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9985199570655823,350,-0.6006309955022058,-0.6941336949327299,True,27.4,mnist_1v5__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.9990133047103882,350,-0.9962773362718833,-3.1422999626313204,True,28.2,mnist_1v5__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9980266690254211,350,-0.9964221658229448,-3.1621771507837146,True,28.2,mnist_1v5__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9990133047103882,250,-0.6869168897494868,-0.8420945664828766,True,28.7,mnist_1v5__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9980266690254211,350,-0.8420328356789506,-1.2281189260407361,True,28.1,mnist_1v5__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.9980266690254211,350,-0.9645659584220809,-2.0076768145185673,True,28.6,mnist_1v5__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9990133047103882,200,-0.9999891659965936,-6.062981334927242,True,29.5,mnist_1v5__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v5,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.9980266690254211,350,-0.9514096371826156,-1.8464410329781544,True,33.2,mnist_1v5__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

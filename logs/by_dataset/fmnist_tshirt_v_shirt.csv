@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+fmnist_tshirt_v_shirt,real,narrow,5,0.8460000157356262,350,-0.356542230360273,-0.3729189323157149,4,True,21.9,fmnist_tshirt_v_shirt__w25__d5__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,narrow,11,0.8399999737739563,350,-0.2303182078460014,-0.09574462382728079,10,True,41.6,fmnist_tshirt_v_shirt__w25__d11__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,wide,5,0.8445000052452087,350,-0.4691555007853069,-0.5089869461222762,4,True,23.1,fmnist_tshirt_v_shirt__w50__d5__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,wide,11,0.8544999957084656,250,-0.30010493025717677,-0.1264079251932867,10,True,42.8,fmnist_tshirt_v_shirt__w50__d11__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,bottleneck,5,0.8464999794960022,350,-0.9075774993925854,-1.513609464520062,4,True,22.6,fmnist_tshirt_v_shirt__bottleneck__d5__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,bottleneck,11,0.8460000157356262,250,-0.017152444797523182,-0.00700314310950855,10,True,44.1,fmnist_tshirt_v_shirt__bottleneck__d11__s0,,20251007_220339
+fmnist_tshirt_v_shirt,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.843999981880188,350,-0.35584754069089786,-0.37212329645826175,True,27.7,fmnist_tshirt_v_shirt__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.8529999852180481,350,-0.7647867227911149,-1.0076462299856213,True,28.5,fmnist_tshirt_v_shirt__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.8650000095367432,350,-0.6822311273238263,-0.8332759701283592,True,29.0,fmnist_tshirt_v_shirt__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.8510000109672546,150,0.4564354020719446,0.49279933450288643,True,29.8,fmnist_tshirt_v_shirt__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.8665000200271606,120,-0.9973882608193408,-3.319789692198936,True,28.7,fmnist_tshirt_v_shirt__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.8550000190734863,350,0.3046847583298624,0.3146756991070812,True,29.7,fmnist_tshirt_v_shirt__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.8560000061988831,350,0.0835822731650436,0.08377772824337126,True,33.1,fmnist_tshirt_v_shirt__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_tshirt_v_shirt,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.847000002861023,350,0.006032120081397974,0.006032193245519465,True,31.2,fmnist_tshirt_v_shirt__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

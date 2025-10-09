@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+mnist_6v8,real,narrow,5,0.9932712316513062,200,-0.9908225043962099,-2.6897743968748005,4,True,21.4,mnist_6v8__w25__d5__s0,,20251007_220339
+mnist_6v8,real,narrow,11,0.9927536249160767,150,-0.8546607921984094,-0.5197790131509882,10,True,41.3,mnist_6v8__w25__d11__s0,,20251007_220339
+mnist_6v8,real,wide,5,0.9937888383865356,250,-0.9991432598674754,-3.8775473166631715,4,True,22.3,mnist_6v8__w50__d5__s0,,20251007_220339
+mnist_6v8,real,wide,11,0.9906832575798035,350,-0.6134719889602639,-0.291681015637218,10,True,42.0,mnist_6v8__w50__d11__s0,,20251007_220339
+mnist_6v8,real,bottleneck,5,0.9948239922523499,200,-0.9999966014307313,-6.642650749754657,4,True,22.8,mnist_6v8__bottleneck__d5__s0,,20251007_220339
+mnist_6v8,real,bottleneck,11,0.9912008047103882,350,-0.8680853801197757,-0.5410339924949981,10,True,41.9,mnist_6v8__bottleneck__d11__s0,,20251007_220339
+mnist_6v8,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9948239922523499,250,-0.8772989504869382,-1.3639191945533313,True,27.3,mnist_6v8__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.9963768124580383,250,-0.9917382425615886,-2.7425628476656008,True,31.8,mnist_6v8__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9953415989875793,350,-0.9733647703104844,-2.1526303030272467,True,28.3,mnist_6v8__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9963768124580383,350,-0.9855884373982494,-2.462819874183545,True,29.4,mnist_6v8__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9953415989875793,200,-0.9987989518067565,-3.708553542584645,True,28.1,mnist_6v8__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.9953415989875793,150,-0.9971195814009488,-3.2707627908327552,True,29.0,mnist_6v8__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9953415989875793,350,-0.937933677863489,-1.720587022363112,True,29.5,mnist_6v8__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_6v8,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.9953415989875793,250,-0.9932862265043382,-2.8466893819721704,True,30.8,mnist_6v8__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

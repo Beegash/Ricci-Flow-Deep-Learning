@@ -1,0 +1,7 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+cifar10_car_v_truck,real,narrow,5,0.7275000214576721,250,-0.8419843136080608,-1.2279521958809383,4,True,45.9,cifar10_car_v_truck__w25__d5__s0,,20251007_220339
+cifar10_car_v_truck,real,narrow,11,0.7335000038146973,10,0.8102255159060808,0.4603755284507917,10,True,96.5,cifar10_car_v_truck__w25__d11__s0,,20251007_220339
+cifar10_car_v_truck,real,wide,5,0.7350000143051147,350,-0.9999950693257353,-6.456589763401073,4,True,47.1,cifar10_car_v_truck__w50__d5__s0,,20251007_220339
+cifar10_car_v_truck,real,wide,11,0.7599999904632568,350,0.07860973094909779,0.03215863911269599,10,True,91.7,cifar10_car_v_truck__w50__d11__s0,,20251007_220339
+cifar10_car_v_truck,real,bottleneck,5,0.7465000152587891,350,-0.7890141368362771,-1.068814426779257,4,True,44.8,cifar10_car_v_truck__bottleneck__d5__s0,,20251007_220339
+cifar10_car_v_truck,real,bottleneck,11,0.7544999718666077,350,0.14304656533038515,0.0588018017912584,10,True,91.8,cifar10_car_v_truck__bottleneck__d11__s0,,20251007_220339

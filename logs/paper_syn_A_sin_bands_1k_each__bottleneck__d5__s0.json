@@ -1,0 +1,21 @@
+{
+  "dataset": "data\\paper_syn_A_sin_bands_1k_each.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9994999766349792,
+  "layer_names": [
+    "dense_2032",
+    "dense_2033",
+    "dense_2034",
+    "dense_2035",
+    "dense_2036"
+  ]
+}

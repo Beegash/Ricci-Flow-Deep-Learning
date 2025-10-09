@@ -1,0 +1,17 @@
+{
+  "dataset": "data\\paper_syn_C_sine_surface_plane_nz0.16_nxy0.03.npz",
+  "width": 25,
+  "depth": 5,
+  "seed": 0,
+  "epochs": 40,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.8725000023841858,
+  "layer_names": [
+    "dense_1648",
+    "dense_1649",
+    "dense_1650",
+    "dense_1651",
+    "dense_1652"
+  ]
+}

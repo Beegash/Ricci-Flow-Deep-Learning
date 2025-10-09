@@ -1,0 +1,17 @@
+{
+  "dataset": "data/paper_syn_A_sin_bands_1k_each.npz",
+  "width": 25,
+  "depth": 5,
+  "seed": 2,
+  "epochs": 60,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.9994999766349792,
+  "layer_names": [
+    "dense_1456",
+    "dense_1457",
+    "dense_1458",
+    "dense_1459",
+    "dense_1460"
+  ]
+}

@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+fmnist_sandal_v_boot,real,narrow,5,0.9869999885559082,350,-0.08735101614050148,-0.08757420740648131,4,True,21.6,fmnist_sandal_v_boot__w25__d5__s0,,20251007_220339
+fmnist_sandal_v_boot,real,narrow,11,0.9829999804496765,350,-0.7522691638619832,-0.3993329792858655,10,True,41.3,fmnist_sandal_v_boot__w25__d11__s0,,20251007_220339
+fmnist_sandal_v_boot,real,wide,5,0.9815000295639038,250,0.6836422921783314,0.835920598258709,4,True,22.3,fmnist_sandal_v_boot__w50__d5__s0,,20251007_220339
+fmnist_sandal_v_boot,real,wide,11,0.984000027179718,350,-0.5083213114110722,-0.22880829961164337,10,True,42.7,fmnist_sandal_v_boot__w50__d11__s0,,20251007_220339
+fmnist_sandal_v_boot,real,bottleneck,5,0.9810000061988831,250,-0.7025759632374433,-0.8723694009509899,4,True,23.3,fmnist_sandal_v_boot__bottleneck__d5__s0,,20251007_220339
+fmnist_sandal_v_boot,real,bottleneck,11,0.9850000143051147,200,-0.83729588537256,-0.4948207776139374,10,True,43.5,fmnist_sandal_v_boot__bottleneck__d11__s0,,20251007_220339
+fmnist_sandal_v_boot,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9865000247955322,250,-0.703530522662241,-0.8742569423156656,True,28.0,fmnist_sandal_v_boot__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.9869999885559082,350,-0.9301034642912177,-1.6591564007835027,True,28.5,fmnist_sandal_v_boot__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9860000014305115,350,-0.4761428378427704,-0.5179843591130422,True,29.0,fmnist_sandal_v_boot__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9879999756813049,350,0.12306464823930291,0.1236916230401472,True,29.6,fmnist_sandal_v_boot__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9884999990463257,350,-0.6439605314134206,-0.7649109880744366,True,28.3,fmnist_sandal_v_boot__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.9850000143051147,350,-0.9289980677987788,-1.6510244602364892,True,31.8,fmnist_sandal_v_boot__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9835000038146973,350,-0.7088415245127675,-0.8848516203122877,True,29.9,fmnist_sandal_v_boot__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+fmnist_sandal_v_boot,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.984499990940094,350,-0.3154908282985509,-0.32663154233239733,True,30.9,fmnist_sandal_v_boot__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

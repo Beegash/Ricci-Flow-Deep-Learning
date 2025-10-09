@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+cifar10_cat_v_dog,real,narrow,5,0.6025000214576721,10,-0.9581457242685217,-1.9227796428243427,4,True,43.3,cifar10_cat_v_dog__w25__d5__s0,,20251007_220339
+cifar10_cat_v_dog,real,narrow,11,0.625,350,0.7026430724423439,0.35619742494836804,10,True,92.5,cifar10_cat_v_dog__w25__d11__s0,,20251007_220339
+cifar10_cat_v_dog,real,wide,5,0.6134999990463257,30,-0.9968752142343982,-3.2299865595098898,4,True,45.5,cifar10_cat_v_dog__w50__d5__s0,,20251007_220339
+cifar10_cat_v_dog,real,wide,11,0.6309999823570251,350,0.35290077162751615,0.1505429117451165,10,True,95.7,cifar10_cat_v_dog__w50__d11__s0,,20251007_220339
+cifar10_cat_v_dog,real,bottleneck,5,0.6259999871253967,350,-0.9859778522257721,-2.476614314560902,4,True,46.5,cifar10_cat_v_dog__bottleneck__d5__s0,,20251007_220339
+cifar10_cat_v_dog,real,bottleneck,11,0.6134999990463257,350,0.6716655006137819,0.3322207849728597,10,True,102.0,cifar10_cat_v_dog__bottleneck__d11__s0,,20251007_220339
+cifar10_cat_v_dog,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.5005000233650208,,,,False,10.4,cifar10_cat_v_dog__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.5860000252723694,200,-0.17030269115561864,-0.17197837929250243,True,30.1,cifar10_cat_v_dog__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.5005000233650208,,,,False,10.7,cifar10_cat_v_dog__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.5964999794960022,10,-0.9945582720684905,-2.9520406211982952,True,29.9,cifar10_cat_v_dog__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.5005000233650208,,,,False,11.5,cifar10_cat_v_dog__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.6044999957084656,20,-0.5552652040487773,-0.6259616094722593,True,31.0,cifar10_cat_v_dog__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.5005000233650208,,,,False,12.5,cifar10_cat_v_dog__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+cifar10_cat_v_dog,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.5914999842643738,350,0.9993276944018916,3.9988042664858616,True,30.0,cifar10_cat_v_dog__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

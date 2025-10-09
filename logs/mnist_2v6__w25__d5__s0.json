@@ -1,0 +1,17 @@
+{
+  "dataset": "data\\mnist_2v6.npz",
+  "width": 25,
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9939698576927185,
+  "layer_names": [
+    "dense_1888",
+    "dense_1889",
+    "dense_1890",
+    "dense_1891",
+    "dense_1892"
+  ]
+}

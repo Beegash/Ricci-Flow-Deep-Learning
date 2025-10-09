@@ -1,0 +1,23 @@
+{
+  "dataset": "data\\paper_syn_A_sin_bands_1k_each.npz",
+  "width": 25,
+  "depth": 11,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9994999766349792,
+  "layer_names": [
+    "dense_2002",
+    "dense_2003",
+    "dense_2004",
+    "dense_2005",
+    "dense_2006",
+    "dense_2007",
+    "dense_2008",
+    "dense_2009",
+    "dense_2010",
+    "dense_2011",
+    "dense_2012"
+  ]
+}

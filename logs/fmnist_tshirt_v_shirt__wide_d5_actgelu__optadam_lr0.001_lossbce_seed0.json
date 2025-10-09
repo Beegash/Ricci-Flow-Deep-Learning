@@ -1,0 +1,30 @@
+{
+  "dataset": "fmnist_tshirt_v_shirt",
+  "mode": "real",
+  "width": "wide",
+  "depth": 5,
+  "activation": "gelu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "adam",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.847000002861023,
+  "best_k": 350,
+  "rho": 0.006032120081397974,
+  "z": 0.006032193245519465,
+  "connected_all_layers": true,
+  "elapsed_s": 31.2,
+  "run_id": "fmnist_tshirt_v_shirt__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_gelu",
+    "block2_50_gelu",
+    "block3_50_gelu",
+    "block4_50_gelu",
+    "block5_50_gelu"
+  ],
+  "npz": "data\\fmnist_tshirt_v_shirt.npz"
+}

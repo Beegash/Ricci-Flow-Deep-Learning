@@ -1,0 +1,27 @@
+{
+  "dataset": "data\\synthetic_B_circles_1k_each.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 11,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9660000205039978,
+  "layer_names": [
+    "dense_2254",
+    "dense_2255",
+    "dense_2256",
+    "dense_2257",
+    "dense_2258",
+    "dense_2259",
+    "dense_2260",
+    "dense_2261",
+    "dense_2262",
+    "dense_2263",
+    "dense_2264"
+  ]
+}

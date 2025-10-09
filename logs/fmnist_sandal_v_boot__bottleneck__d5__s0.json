@@ -1,0 +1,21 @@
+{
+  "dataset": "data/fmnist_sandal_v_boot.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 256,
+  "standardize": true,
+  "acc": 0.9810000061988831,
+  "layer_names": [
+    "dense_862",
+    "dense_863",
+    "dense_864",
+    "dense_865",
+    "dense_866"
+  ]
+}

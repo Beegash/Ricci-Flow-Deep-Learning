@@ -1,0 +1,21 @@
+{
+  "dataset": "data\\svhn_1v7.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.9398707747459412,
+  "layer_names": [
+    "dense_2464",
+    "dense_2465",
+    "dense_2466",
+    "dense_2467",
+    "dense_2468"
+  ]
+}

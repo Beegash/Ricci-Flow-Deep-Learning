@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+mnist_1v7,real,narrow,5,0.994452178478241,350,-0.9671917559003012,-2.0468412359016046,4,True,22.0,mnist_1v7__w25__d5__s0,,20251007_220339
+mnist_1v7,real,narrow,11,0.994452178478241,200,-0.635591803815095,-0.3064894075135315,10,True,42.1,mnist_1v7__w25__d11__s0,,20251007_220339
+mnist_1v7,real,wide,5,0.9963014125823975,350,0.19775635574756756,0.2003965122995439,4,True,22.7,mnist_1v7__w50__d5__s0,,20251007_220339
+mnist_1v7,real,wide,11,0.9949144721031189,200,-0.9902755083942495,-1.0862222957146004,10,True,42.7,mnist_1v7__w50__d11__s0,,20251007_220339
+mnist_1v7,real,bottleneck,5,0.9930651783943176,350,-0.18927421621997004,-0.19158431093672462,4,True,22.9,mnist_1v7__bottleneck__d5__s0,,20251007_220339
+mnist_1v7,real,bottleneck,11,0.9935275316238403,350,-0.3644062568316196,-0.15593350572756132,10,True,43.6,mnist_1v7__bottleneck__d11__s0,,20251007_220339
+mnist_1v7,real,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9953767657279968,250,0.27212264930443536,0.2791548009884294,True,27.7,mnist_1v7__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.9958391189575195,250,-0.39112878598036693,-0.41313199934976125,True,28.4,mnist_1v7__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9967637658119202,250,-0.9487217365695318,-1.8188309846621626,True,28.9,mnist_1v7__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9963014125823975,200,-0.9816579877167254,-2.3412474795044664,True,29.2,mnist_1v7__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9972260594367981,250,-0.9402443993733911,-1.7401531512128727,True,28.5,mnist_1v7__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,wide,5,relu,False,0.0,False,adam,0.001,bce,0.9963014125823975,150,-0.8938603662607099,-1.4408085100557189,True,29.2,mnist_1v7__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9976884126663208,250,-0.5512592009710165,-0.6201884158962634,True,30.0,mnist_1v7__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+mnist_1v7,real,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.9963014125823975,350,-0.914383263852484,-1.5536350072676266,True,30.7,mnist_1v7__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

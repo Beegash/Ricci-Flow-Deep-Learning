@@ -1,0 +1,30 @@
+{
+  "dataset": "synthetic_A_moons_full10k",
+  "mode": "synthetic",
+  "width": "wide",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9162999987602234,
+  "best_k": 5,
+  "rho": -0.10766828714070065,
+  "z": -0.10808725189646766,
+  "connected_all_layers": true,
+  "elapsed_s": 944.2,
+  "run_id": "synthetic_A_moons_full10k__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_relu",
+    "block2_50_relu",
+    "block3_50_relu",
+    "block4_50_relu",
+    "block5_50_relu"
+  ],
+  "npz": "data\\synthetic_A_moons_full10k.npz"
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "data\\cifar10_cat_v_dog.npz",
+  "width": [
+    50,
+    25,
+    50
+  ],
+  "depth": 5,
+  "seed": 0,
+  "epochs": 60,
+  "batch_size": 128,
+  "standardize": true,
+  "acc": 0.6194999814033508,
+  "layer_names": [
+    "dense_2356",
+    "dense_2357",
+    "dense_2358",
+    "dense_2359",
+    "dense_2360"
+  ]
+}

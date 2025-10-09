@@ -1,0 +1,15 @@
+dataset,mode,width,depth,test_acc,best_k,rho,z,L,connected_all_layers,elapsed_s,run_id,error,session
+synthetic_A_moons_1k_each,synthetic,narrow,5,0.9100000262260437,12,-0.8894595295359172,-1.4193322007504936,4,True,15.3,synthetic_A_moons_1k_each__w25__d5__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,narrow,11,0.9110000133514404,5,-0.6970208647980414,-0.3516988840071791,10,True,29.5,synthetic_A_moons_1k_each__w25__d11__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,wide,5,0.9179999828338623,20,-0.9997041484281977,-4.409325959926135,4,True,14.9,synthetic_A_moons_1k_each__w50__d5__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,wide,11,0.9129999876022339,7,-0.3618188847108388,-0.1547167894510499,10,True,29.5,synthetic_A_moons_1k_each__w50__d11__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,bottleneck,5,0.9160000085830688,4,-0.9968341339206823,-3.2234458057115254,4,True,15.2,synthetic_A_moons_1k_each__bottleneck__d5__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,bottleneck,11,0.9139999747276306,7,-0.24038845935581687,-0.10009691054652145,10,True,28.7,synthetic_A_moons_1k_each__bottleneck__d11__s0,,20251007_220339
+synthetic_A_moons_1k_each,synthetic,narrow,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9120000004768372,90,-0.9974618128486111,-3.334091226849835,True,13.0,synthetic_A_moons_1k_each__narrow_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,narrow,5,relu,False,0.0,False,adam,0.001,bce,0.9150000214576721,12,-0.9987369800903882,-3.683382571555165,True,13.8,synthetic_A_moons_1k_each__narrow_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,narrow,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.8989999890327454,5,-0.7986842707499004,-1.0949681239817064,True,13.3,synthetic_A_moons_1k_each__narrow_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,narrow,5,gelu,False,0.0,False,adam,0.001,bce,0.9129999876022339,20,-0.9933426426593264,-2.8509228091913443,True,13.9,synthetic_A_moons_1k_each__narrow_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,wide,5,relu,False,0.0,False,rmsprop,0.001,bce,0.9169999957084656,90,-0.9503796787071966,-1.8356894431624529,True,13.3,synthetic_A_moons_1k_each__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,wide,5,relu,False,0.0,False,adam,0.001,bce,0.9139999747276306,9,-0.9936676026965199,-2.8760261762448374,True,13.6,synthetic_A_moons_1k_each__wide_d5_actrelu__optadam_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,wide,5,gelu,False,0.0,False,rmsprop,0.001,bce,0.9089999794960022,20,-0.999111604145897,-3.859398008301706,True,13.5,synthetic_A_moons_1k_each__wide_d5_actgelu__optrmsprop_lr0.001_lossbce_seed0,,20251008_003902
+synthetic_A_moons_1k_each,synthetic,wide,5,gelu,False,0.0,False,adam,0.001,bce,0.9120000004768372,10,-0.9999987722486243,-7.15173638911298,True,14.0,synthetic_A_moons_1k_each__wide_d5_actgelu__optadam_lr0.001_lossbce_seed0,,20251008_003902

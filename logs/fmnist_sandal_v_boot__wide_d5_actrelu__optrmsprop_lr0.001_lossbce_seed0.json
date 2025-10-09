@@ -1,0 +1,30 @@
+{
+  "dataset": "fmnist_sandal_v_boot",
+  "mode": "real",
+  "width": "wide",
+  "depth": 5,
+  "activation": "relu",
+  "batchnorm": false,
+  "dropout": 0.0,
+  "residual": false,
+  "optimizer": "rmsprop",
+  "lr": 0.001,
+  "loss": "bce",
+  "test_acc": 0.9884999990463257,
+  "best_k": 350,
+  "rho": -0.6439605314134206,
+  "z": -0.7649109880744366,
+  "connected_all_layers": true,
+  "elapsed_s": 28.3,
+  "run_id": "fmnist_sandal_v_boot__wide_d5_actrelu__optrmsprop_lr0.001_lossbce_seed0",
+  "error": NaN,
+  "session": "20251008_003902",
+  "layer_names": [
+    "block1_50_relu",
+    "block2_50_relu",
+    "block3_50_relu",
+    "block4_50_relu",
+    "block5_50_relu"
+  ],
+  "npz": "data\\fmnist_sandal_v_boot.npz"
+}
