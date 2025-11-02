@@ -1,8 +1,27 @@
-numpy==1.24.3
-pandas==2.0.3
-scipy==1.11.1
-matplotlib==3.7.2
-tensorflow==2.13.0
-keras==2.13.1
-scikit-learn==1.3.0
-networkx==3.1
+# Ricci-NN Project Requirements
+# Deep Learning and Neural Networks
+tensorflow>=2.13.0
+# Note: keras is now integrated into tensorflow, no separate install needed
+
+# Data Science and Numerical Computing
+numpy>=1.21.0,<2.0.0
+pandas>=1.3.0
+scipy>=1.7.0
+
+# Machine Learning
+scikit-learn>=1.0.0
+
+# Graph Theory and Network Analysis
+networkx>=2.6.0
+
+# Data Visualization
+matplotlib>=3.5.0
+
+# File I/O and System
+h5py>=3.1.0
+
+# Optional: Jupyter Notebook support
+# jupyter>=1.0.0
+# ipykernel>=6.0.0
+
+

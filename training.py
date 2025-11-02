@@ -47,7 +47,7 @@ print("Dimensions of x_train:", x_train.shape)
 print("Dimensions of x_test:", x_test.shape)
 
 
-b = 3
+b = 25  # Increased to 25 for robust statistics (paper likely used 20-50 models)
 accuracy = list()
 model_predict = np.empty(b, dtype = object)
 
@@ -82,10 +82,17 @@ for j in range(b):
     accuracy.append(acc)
 
     # Output the layers on implementation over test data
-    layer_outputs = [layer.output for layer in model.layers]
-    activation_model = Model(inputs=model.input, outputs=layer_outputs)
-    activation_model.save(os.path.join(output_dir, "activation_model"+ str(j) + ".h5"))
-    model_predict[j] = activation_model.predict(x_test)
+    # Get activations by manually passing data through each layer
+    activations = []
+    current_input = x_test
+    # Extract only hidden layer outputs (exclude the final sigmoid output layer)
+    for layer in model.layers[:-1]:  # Exclude last layer
+        current_output = layer(current_input)
+        activations.append(current_output.numpy())
+        current_input = current_output
+        
+    
+    model_predict[j] = activations
 
 
 # np.save("model_predict.npy", model_predict)
