@@ -17,6 +17,9 @@ networkx>=2.6.0
 # Data Visualization
 matplotlib>=3.5.0
 
+# Progress bars
+tqdm>=4.62.0
+
 # File I/O and System
 h5py>=3.1.0
 
