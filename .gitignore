@@ -233,3 +233,4 @@ $RECYCLE.BIN/
 datasets/
 extracted_datasets/
 output_layers/
+.pip/
