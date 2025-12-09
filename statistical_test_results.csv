@@ -1,4 +1,0 @@
-,value
-t_test_high_vs_low_accuracy,"{'t_statistic': np.float64(-10.31387179745749), 'p_value': np.float64(1.6658210614721655e-24), 'mean_rho_high_acc': np.float64(-541599645.6471707), 'mean_rho_low_acc': np.float64(-400731496.638412), 'n_high': 1402, 'n_low': 1398}"
-pearson_correlation,"{'correlation': np.float64(-0.4564920852454192), 'p_value': np.float64(3.4637409851661157e-144), 'n_samples': 2800}"
-t_test_top_vs_bottom_quartile,"{'t_statistic': np.float64(-21.53414860720509), 'p_value': np.float64(2.6858913050429263e-89), 'mean_rho_top': np.float64(-335058020.433746), 'mean_rho_low': np.float64(-29428480.627074447), 'n_top': 727, 'n_bottom': 703}"
