@@ -47,7 +47,7 @@ print("Dimensions of x_train:", x_train.shape)
 print("Dimensions of x_test:", x_test.shape)
 
 
-b = 25  # Increased to 25 for robust statistics (paper likely used 20-50 models)
+b = 3  # Increased to 25 for robust statistics (paper likely used 20-50 models)
 accuracy = list()
 model_predict = np.empty(b, dtype = object)
 

@@ -234,3 +234,7 @@ datasets/
 extracted_datasets/
 output_layers/
 .pip/
+layer_gifs/
+our_data_fmnist/
+ricci_flow_laboratory/
+visuals/
