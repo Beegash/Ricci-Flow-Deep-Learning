@@ -5,7 +5,9 @@ Experiment 1: Per-Layer Ricci Coefficients at Final Epoch
 ==========================================================
 
 Analyzes 45 pre-trained networks using activations from output_k_sweep/
-Computes per-layer Ricci coefficients using LOCAL Ricci calculations.
+Computes per-layer Ricci coefficients using LOCAL Ricci calculations
+for ALL curvature types: Forman-Ricci, Augmented-Forman-Ricci,
+Approx-Ollivier-Ricci, Ollivier-Ricci.
 
 Networks:
 - Flat: depths 4-12, widths 16/32/64/128 (36 networks)
@@ -22,7 +24,12 @@ import argparse
 from tqdm import tqdm
 
 # Import local Ricci computation (uses per-data-point calculations)
-from local_knn_fixed import analyze_network, format_layer_dict
+from local_knn_fixed import (
+    compute_layer_ricci_coefficients,
+    format_layer_dict,
+    CURVATURE_TYPES,
+    CURVATURE_PREFIXES,
+)
 
 # =============================================================================
 # CONFIGURATION
@@ -92,18 +99,20 @@ def generate_bottleneck_structure(num_layers: int, outer: int = 128, mid: int = 
 
 def run_experiment1(input_dir: str, output_dir: str, k: int, test_mode: bool = False):
     """
-    Run Experiment 1: Per-layer Ricci at final epoch.
+    Run Experiment 1: Per-layer Ricci at final epoch for all curvature types.
     
-    Reads activations from input_dir, computes Ricci using local_knn_fixed,
-    outputs CSV to output_dir.
+    Reads activations from input_dir, computes Ricci using local_knn_fixed
+    for all 4 curvature types, outputs CSV to output_dir.
     """
     print("=" * 70)
     print("EXPERIMENT 1: Per-Layer Ricci Coefficients (Final Epoch)")
+    print("  All Curvature Types: FR, AFR, AOR, OR")
     print("=" * 70)
     print(f"\nConfiguration:")
     print(f"  K = {k}")
     print(f"  Input: {input_dir}")
     print(f"  Output: {output_dir}")
+    print(f"  Curvature types: {', '.join(CURVATURE_TYPES)}")
     
     # Find all network folders
     base_path = os.path.dirname(os.path.abspath(__file__))
@@ -155,11 +164,7 @@ def run_experiment1(input_dir: str, output_dir: str, k: int, test_mode: bool = F
         # Convert to list of arrays
         activations_list = list(activations)
         
-        # Run LOCAL Ricci analysis (per-data-point computation)
-        result = analyze_network(activations_list, k)
-        layer_dict = format_layer_dict(result['layer_coefficients'])
-        
-        # Build row
+        # Build row with base info
         row = {
             'network_id': idx + 1,
             'architecture': network_info['architecture'],
@@ -170,26 +175,42 @@ def run_experiment1(input_dir: str, output_dir: str, k: int, test_mode: bool = F
                 network_info['depth'], 
                 network_info['width']
             ),
-            'r_all': result['r_all'],
-            'p_all': np.nan,  # Not computed in current implementation
-            'r_skip': result['r_skip'],
-            'p_skip': np.nan,
             'accuracy': accuracy,
         }
-        row.update(layer_dict)
-        all_rows.append(row)
         
-        tqdm.write(f"  {folder}: r_all={result['r_all']:.3f}, acc={accuracy:.3f}")
+        # Compute layer Ricci coefficients for each curvature type
+        for curv_type in CURVATURE_TYPES:
+            prefix = CURVATURE_PREFIXES[curv_type]
+            try:
+                layer_coefs = compute_layer_ricci_coefficients(activations_list, k, curv=curv_type)
+                layer_dict = format_layer_dict(layer_coefs, prefix=prefix)
+            except Exception as e:
+                tqdm.write(f"  Warning: {curv_type} failed for {folder}: {e}")
+                # Fill with NaN
+                layer_dict = {f'{prefix}_L{i}': np.nan for i in range(1, 13)}
+            row.update(layer_dict)
+        
+        all_rows.append(row)
+        tqdm.write(f"  {folder}: acc={accuracy:.3f}")
     
     # Create DataFrame and save
     if not all_rows:
         print("\nNo networks processed successfully!")
         return
     
-    exp1_cols = ['network_id', 'architecture', 'depth', 'width', 'layer_structure',
-                 'r_all', 'p_all', 'r_skip', 'p_skip', 'accuracy'] + [f'L{i}' for i in range(1, 13)]
+    # Build column order: base cols + prefixed layer cols for each curvature type
+    base_cols = ['network_id', 'architecture', 'depth', 'width', 'layer_structure', 'accuracy']
+    layer_cols = []
+    for curv_type in CURVATURE_TYPES:
+        prefix = CURVATURE_PREFIXES[curv_type]
+        layer_cols += [f'{prefix}_L{i}' for i in range(1, 13)]
     
-    df = pd.DataFrame(all_rows)[exp1_cols]
+    all_cols = base_cols + layer_cols
+    
+    # Only include columns that exist in the data
+    existing_cols = [c for c in all_cols if c in all_rows[0]]
+    
+    df = pd.DataFrame(all_rows)[existing_cols]
     csv_path = os.path.join(output_path, "exp1_final_epoch.csv")
     df.to_csv(csv_path, index=False)
     
@@ -198,8 +219,9 @@ def run_experiment1(input_dir: str, output_dir: str, k: int, test_mode: bool = F
     print("=" * 70)
     print(f"\nOutput: {csv_path}")
     print(f"Networks processed: {len(df)}")
+    print(f"Columns: {len(existing_cols)} ({len(base_cols)} base + {len(existing_cols) - len(base_cols)} layer)")
     print(f"\nSample results:")
-    print(df[['architecture', 'depth', 'width', 'r_all', 'accuracy']].head(10).to_string(index=False))
+    print(df[['architecture', 'depth', 'width', 'accuracy']].head(10).to_string(index=False))
 
 
 if __name__ == "__main__":
